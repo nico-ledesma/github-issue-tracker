@@ -1,0 +1,23 @@
+html {
+  font-family: $font-sans;
+  font-size: 16px;
+  color: $gray-600;
+  background-color: $gray-100;
+}
+
+// Focus management
+//
+// - Remove focus outline by default to keep design clean.
+// - Detect keyboard navigation with JS, and apply class to <body> to enable it.
+*:active,
+*:focus,
+button:active,
+button:focus {
+  outline: 0;
+}
+
+body.user-is-tabbing *:focus,
+body.user-is-tabbing button:focus {
+  outline: 2px solid #7aacfe !important; /* for non-webkit browsers */
+  outline: 5px auto -webkit-focus-ring-color !important;
+}
