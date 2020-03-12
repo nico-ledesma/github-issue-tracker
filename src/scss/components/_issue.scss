@@ -1,0 +1,86 @@
+.issue {
+  display: block;
+  position: relative;
+  width: 100%;
+  margin-bottom: 1rem;
+  padding: 1.5rem 2.5rem;
+  border-radius: $radius-md;
+  background-color: $white;
+  box-shadow: $shadow-md;
+  overflow: hidden;
+  transition: 0.6s ease-out box-shadow;
+
+  &:hover {
+    box-shadow: $shadow-xl;
+  }
+
+  @include screen(sm) {
+    display: flex;
+  }
+}
+
+.issue__border {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  width: 7px;
+  background-color: $gray-400;
+}
+
+.issue--overdue .issue__border {
+  background-color: $red-400;
+}
+
+.issue__score {
+  margin-bottom: 0.25rem;
+
+  @include screen(sm) {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 3rem;
+    margin-bottom: 0;
+    margin-right: 2rem;
+  }
+}
+
+.issue__scoreValue {
+  font-size: $text-sm;
+  font-weight: 600;
+  color: $gray-600;
+
+  @include screen(sm) {
+    margin-bottom: 0;
+    font-size: $text-base;
+  }
+}
+
+.issue--overdue .issue__scoreValue {
+  color: $red-400;
+}
+
+.issue__title {
+  margin-bottom: 0.25rem;
+  font-weight: 600;
+  color: $gray-700;
+}
+
+.issue__meta {
+  font-size: $text-sm;
+  color: $gray-500;
+}
+
+.issue__labels {
+  margin-top: 1rem;
+}
+
+.issue__label {
+  display: inline-block;
+  margin-right: 0.5rem;
+  padding: 0.15rem 1rem;
+  font-size: $text-sm;
+  border-radius: $radius-md;
+  background-color: $gray-200;
+  border: 1px solid $gray-300;
+}
