@@ -1,0 +1,22 @@
+<div class="issueList" data-controller="issues">
+
+  {# Member selector #}
+  <div class="memberSelector">
+    <select
+      class="memberSelector__select"
+      id="member"
+      name="member"
+      data-target="issues.memberSelector"
+      data-action="issues#filter"
+    >
+      <option>All</option>
+    </select>
+  </div>
+
+  {# Issue list #}
+  <div data-target="issues.list"></div>
+
+  {% include "../components/loader.njk" %}
+  {% include "../components/empty-message.njk" %}
+  {% include "../components/error-message.njk" %}
+</div>

@@ -6,12 +6,16 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>GitHub Issue Tracker</title>
 
+  <link href="https://fonts.googleapis.com/css?family=Inter:400,600,800&display=swap" rel="stylesheet">
   <link rel="stylesheet". href="css/bundle.css">
 </head>
-<body>
-  <h1>GitHub Issue Tracker</h1>
+<body data-controller="focus">
+    {% include "../components/header.njk" %}
 
-  <div id="app"></div>
+
+    <main class="container">
+      {% include "../components/issue-list.njk" %}
+    </main>
 
   <script src="js/bundle.js"></script>
 </body>
