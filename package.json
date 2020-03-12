@@ -7,6 +7,7 @@
     "start": "webpack-dev-server --open",
     "build": "webpack --hide-modules -d",
     "build:production": "webpack --hide-modules -p",
+    "serve": "http-server dist",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
@@ -29,6 +30,7 @@
     "eslint-loader": "^3.0.3",
     "eslint-plugin-import": "^2.20.1",
     "friendly-errors-webpack-plugin": "^1.7.0",
+    "http-server": "^0.12.1",
     "mini-css-extract-plugin": "^0.9.0",
     "node-sass": "^4.13.1",
     "nunjucks": "^3.2.0",
