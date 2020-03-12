@@ -1,0 +1,19 @@
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 50;
+  padding: 1.5rem;
+  background-color: $primary-800;
+  box-shadow: $shadow-md;
+  color: $primary-100;
+}
+
+.header__title {
+  font-size: $text-lg;
+  text-align: center;
+  text-transform: uppercase;
+  font-weight: 600;
+  letter-spacing: 0.15em;
+}
