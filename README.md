@@ -17,6 +17,7 @@
 - I assumed that an issue without a priority label would have a Low Priority, and an issue with more than one will have the higher priority assigned.
 - Although much of the variants weren't used, I left the design system outlined at the start of the project in ```src/scss/global/_variables.scss```
 - When building for production, a bundle analysis is performed automatically.
+- In dev mode, webpack is alerting about missing modules. This is because I'm not importing momentjs locales, which are very heavy.
 
 ## Possible enhancements
 Due to time restrictions, there were some features that I planned that I could not implement. In particular, I think that two helpful features missing are:
