@@ -19,6 +19,11 @@
 - When building for production, a bundle analysis is performed automatically.
 - In dev mode, webpack is alerting about missing modules. This is because I'm not importing momentjs locales, which are very heavy.
 
+## Browser support
+- The app is targetted towards modern browsers. I didn't use any extremely new API, but I use several functions not available in IE11.
+- I assumed IE11 is not supported, to avoid loading unnecessary polyfills.
+- Autoprefixer and Babel transpilation use the browserlistslist defined in package.json: ```> .5%, last 2 versions```.
+
 ## Possible enhancements
 Due to time restrictions, there were some features that I planned that I could not implement. In particular, I think that two helpful features missing are:
 - Alerts or toast messages indicating unexistent users passed in the query string.
