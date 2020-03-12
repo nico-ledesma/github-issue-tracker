@@ -1,0 +1,20 @@
+.errorMessage {
+  display: none;
+  padding: 2rem;
+  text-align: center;
+  opacity: 0;
+}
+
+.errorMessage__button {
+  display: inline-block;
+  margin-top: 2rem;
+  padding: 0.5rem 2rem;
+  color: $primary-100;
+  border-radius: $radius-md;
+  background-color: $primary-500;
+  transition: 0.3s ease-out background-color;
+
+  &:hover {
+    background-color: $primary-600;
+  }
+}
