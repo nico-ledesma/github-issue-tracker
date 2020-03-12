@@ -1,0 +1,41 @@
+<a
+  class="issue {{ 'issue--overdue' if issue.score > 100 }}"
+  href="{{ issue.html_url }}"
+  target="_blank"
+  data-controller="flip"
+  data-target="issues.issue"
+  data-action="remove_issue->flip#remove"
+  data-issue-number="{{ issue.number }}"
+  data-initial-y="{{ initialY }}"
+>
+  {# Border #}
+  <div class="issue__border"></div>
+
+  {# Score #}
+  <div class="issue__score">
+    <p class="issue__scoreValue">{{ issue.score }}</p>
+  </div>
+
+  {# Content #}
+  <div class="issue__content">
+    <h1 class="issue__title">{{ issue.title }}</h1>
+    <p class="issue__meta">
+      #{{ issue.number }}
+      {% if issue.daysAgo === 0 %}
+        opened today
+      {% elif issue.daysAgo === 1 %}
+        opened 1 day ago
+      {% else %}
+        opened {{ issue.daysAgo }} days ago
+      {% endif %}
+      by {{ issue.user.login }}</p>
+
+      {% if issue.labels.length %}
+        <ul class="issue__labels">
+          {% for label in issue.labels %}
+            <li class="issue__label">{{ label.name }}</li>
+          {% endfor %}
+        </ul>
+      {% endif %}
+  </div>
+</a>
