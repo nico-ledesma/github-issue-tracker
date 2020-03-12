@@ -11,11 +11,11 @@ const WEIGHTS = {
 
 export function calculateScore(issue) {
   const weights = issue.labels
-    .filter(label => typeof WEIGHTS[label] !== 'undefined')
+    .filter(label => typeof WEIGHTS[label.name] !== 'undefined')
     .map(label => WEIGHTS[label.name]);
 
   // Use default weight if there were no weight-labels
-  const weight = weights.lenght ? Math.max(weights) : WEIGHTS['default'];
+  const weight = weights.length ? Math.max(weights) : WEIGHTS['default'];
 
   // Get weekdays from creation to now
   const now = moment();
