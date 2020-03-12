@@ -45,5 +45,10 @@
     "webpack-cli": "^3.3.10",
     "webpack-dev-server": "^3.10.3"
   },
-  "dependencies": {}
+  "dependencies": {
+    "animejs": "^3.1.0",
+    "axios": "^0.19.2",
+    "moment": "^2.24.0",
+    "stimulus": "^1.1.1"
+  }
 }
